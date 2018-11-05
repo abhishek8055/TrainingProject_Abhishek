@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
+	<display-name>TrainingProject_Abhishek</display-name>
+  	
+  	<!--CUSTOMER REGISTRATION SERVLET STARTS-->
+	  	<servlet>
+	  		<servlet-name>CustomerRegistrationServlet</servlet-name>
+	  		<servlet-class>com.techaspect.servlet.CustomerRegistrationServlet</servlet-class>
+	  	</servlet>
+	  	<servlet-mapping>
+	  		<servlet-name>CustomerRegistrationServlet</servlet-name>
+	  		<url-pattern>/customerRegister</url-pattern>
+	  	</servlet-mapping>
+  	<!--CUSTOMER REGISTRATION SERVLET ENDS-->
+  	
+  	
+  	<!--CUSTOMER LOGIN SERVLET STARTS-->
+	  	<servlet>
+	  		<servlet-name>CustomerLogInServlet</servlet-name>
+	  		<servlet-class>com.techaspect.servlet.CustomerLogInServlet</servlet-class>
+	  	</servlet>
+	  	<servlet-mapping>
+	  		<servlet-name>CustomerLogInServlet</servlet-name>
+	  		<url-pattern>/customerLogin</url-pattern>
+	  	</servlet-mapping>
+  	<!--CUSTOMER LOGIN SERVLET ENDS-->
+  	
+  	<!--CUSTOMER LOGIN SERVLET STARTS-->
+	  	<servlet>
+	  		<servlet-name>GuestLogInServlet</servlet-name>
+	  		<servlet-class>com.techaspect.servlet.GuestLogInServlet</servlet-class>
+	  	</servlet>
+	  	<servlet-mapping>
+	  		<servlet-name>GuestLogInServlet</servlet-name>
+	  		<url-pattern>/guestLogin</url-pattern>
+	  	</servlet-mapping>
+  	<!--CUSTOMER LOGIN SERVLET ENDS-->
+  	
+  	
+  	<!--GLOBAL PRODUCT LIST SERVLET STARTS-->
+	  	<servlet>
+	  		<servlet-name>GlobalProductListServlet</servlet-name>
+	  		<servlet-class>com.techaspect.servlet.GlobalProductListServlet</servlet-class>
+	  	</servlet>
+	  	<servlet-mapping>
+	  		<servlet-name>GlobalProductListServlet</servlet-name>
+	  		<url-pattern>/productList</url-pattern>
+	  	</servlet-mapping>
+  	<!--GLOBAL PRODUCT LIST SERVLET ENDS-->
+  	
+  	
+  	
+  	<!--ADD TO CART STARTS-->
+	  	<servlet>
+	  		<servlet-name>CartProcessServlet</servlet-name>
+	  		<servlet-class>com.techaspect.servlet.CartProcessServlet</servlet-class>
+	  	</servlet>
+	  	<servlet-mapping>
+	  		<servlet-name>CartProcessServlet</servlet-name>
+	  		<url-pattern>/addCart</url-pattern>
+	  	</servlet-mapping>
+  	<!--ADD TO CART SERVLET ENDS-->
+  	
+  	<!--REMOVE FROM CART STARTS-->
+	  	<servlet>
+	  		<servlet-name>RemoveCartServlet</servlet-name>
+	  		<servlet-class>com.techaspect.servlet.RemoveCartServlet</servlet-class>
+	  	</servlet>
+	  	<servlet-mapping>
+	  		<servlet-name>RemoveCartServlet</servlet-name>
+	  		<url-pattern>/removeCart</url-pattern>
+	  	</servlet-mapping>
+  	<!--REMOVE FROM CART SERVLET ENDS-->
+  	
+  	 	
+  	<!--CONTACT SERVLET STARTS-->
+	  	<servlet>
+	  		<servlet-name>ContactServlet</servlet-name>
+	  		<servlet-class>com.techaspect.servlet.ContactServlet</servlet-class>
+	  	</servlet>
+	  	<servlet-mapping>
+	  		<servlet-name>ContactServlet</servlet-name>
+	  		<url-pattern>/contact</url-pattern>
+	  	</servlet-mapping>
+  	<!--CONTACT SERVLET ENDS-->
+  	
+  	
+  	<!-- UPDATE PASSWORD STARTS -->
+	  	<servlet>
+	  		<servlet-name>CustomerPasswordUpdateServlet</servlet-name>
+	  		<servlet-class>com.techaspect.servlet.CustomerPasswordUpdateServlet</servlet-class>
+	  	</servlet>
+	  	<servlet-mapping>
+	  		<servlet-name>CustomerPasswordUpdateServlet</servlet-name>
+	  		<url-pattern>/updatePassword</url-pattern>
+	  	</servlet-mapping>
+  	<!-- UPDATE PASSWORD ENDS -->
+  	
+  	<!-- CUSTOMER DETAILS UPDATE STARTS -->
+	  	<servlet>
+	  		<servlet-name>CustomerDetailsUpdateServlet</servlet-name>
+	  		<servlet-class>com.techaspect.servlet.CustomerDetailsUpdateServlet</servlet-class>
+	  		
+	  		<multipart-config>
+	        	<max-file-size>10485760</max-file-size>
+	        	<max-request-size>20971520</max-request-size>
+	        	<file-size-threshold>5242880</file-size-threshold>
+	    	</multipart-config>
+	  	</servlet>
+	  	<servlet-mapping>
+	  		<servlet-name>CustomerDetailsUpdateServlet</servlet-name>
+	  		<url-pattern>/detailsUpdate</url-pattern>
+	  	</servlet-mapping>
+  	<!-- CUSTOMER DETAILS UPDATE ENDS -->
+  	
+  	
+  	<!--VENDOR LOGIN SERVLET STARTS-->
+	  	<servlet>
+	  		<servlet-name>VendorLoginServlet</servlet-name>
+	  		<servlet-class>com.techaspect.servlet.VendorLoginServlet</servlet-class>
+	  	</servlet>
+	  	<servlet-mapping>
+	  		<servlet-name>VendorLoginServlet</servlet-name>
+	  		<url-pattern>/vendorLogin</url-pattern>
+	  	</servlet-mapping>
+  	<!--VENDOR LOGIN SERVLET ENDS-->
+  	
+  	<!--DELETE PRODUCT SERVLET STARTS-->
+	  	<servlet>
+	  		<servlet-name>DeleteProductServlet</servlet-name>
+	  		<servlet-class>com.techaspect.servlet.DeleteProductServlet</servlet-class>
+	  	</servlet>
+	  	<servlet-mapping>
+	  		<servlet-name>DeleteProductServlet</servlet-name>
+	  		<url-pattern>/deleteProduct</url-pattern>
+	  	</servlet-mapping>
+  	<!--DELETE PRODUCT SERVLET ENDS-->
+  	
+	
+	
+	
+	<!-- NEW PRODUCT FORM STARTS -->
+	  	<servlet>
+			<servlet-name>NewProductProcessServlet</servlet-name>
+			<servlet-class>com.techaspect.servlet.NewProductProcessServlet</servlet-class>
+			
+			<multipart-config>
+	        	<max-file-size>1048576000</max-file-size>
+	        	<max-request-size>2097152000</max-request-size>
+	        	<file-size-threshold>524288000</file-size-threshold>
+	    	</multipart-config>
+		</servlet>
+		<servlet-mapping>
+			<servlet-name>NewProductProcessServlet</servlet-name>
+			<url-pattern>/addNewProduct</url-pattern>
+		</servlet-mapping>
+	<!--New PRODUCT FORM ENDS -->
+	
+	<!-- NEW PRODUCT EDIT FORM STARTS -->
+	  	<servlet>
+			<servlet-name>EditProductServlet</servlet-name>
+			<servlet-class>com.techaspect.servlet.EditProductServlet</servlet-class>
+			
+			<multipart-config>
+	        	<max-file-size>1048576000</max-file-size>
+	        	<max-request-size>2097152000</max-request-size>
+	        	<file-size-threshold>524288000</file-size-threshold>
+	    	</multipart-config>
+		</servlet>
+		<servlet-mapping>
+			<servlet-name>EditProductServlet</servlet-name>
+			<url-pattern>/editProductForm</url-pattern>
+		</servlet-mapping>
+	<!--New PRODUCT EDIT FORM ENDS -->
+	
+	
+	<error-page>
+  		<error-code>404</error-code>
+  		<location>/Error.jsp</location>
+  	</error-page>
+  	
+  	<error-page>
+  		<error-code>503</error-code>
+  		<location>/Error.jsp</location>
+  	</error-page>
+	
+	
+	<error-page>
+  		<exception-type>java.lang.Exception</exception-type>
+  		<location>/Exception.jsp</location>
+  	</error-page>
+	
+	
+	
+</web-app>
